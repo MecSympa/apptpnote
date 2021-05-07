@@ -1,3 +1,34 @@
+## Contenu du Repository
+
+Ce repo contient une application react ainsi que tous les fichiers nécessaire au déploiement sur DockerHub et Heroku
+
+## Déroulé
+
+-Création de l'application puis dans un repo GitHub
+-Création l'application avec Heroku
+-création de l'image docker de l'app
+-pûsh de l'image docker manuellement
+-DockerFile qui push l'image sur docker hub
+-Création des Action, avec githubaction des actions qui push l'app sur heroku et sur docker
+
+
+
+## Conclusion
+
+Ce TP m'a permis d'en apprendre plus sur les environement devops ainsi que de me permettre la mise en pratique de ceux-ci. Cela s'est avéré très instructif et
+sera très utilse par la suite, dans mon parcours professionel. 
+
+## MERCI ! et bonne continuation à toi Jean
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
