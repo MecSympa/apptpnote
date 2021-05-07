@@ -12,23 +12,22 @@ jobs:
 
 
   build:
-#systeme sur lequel on lance les actions
+
     runs-on: ubuntu-latest
 
     steps:
    
     - uses: actions/checkout@v2
     - name: docker login
-#On stocke les variables secretess qui contiennent les identifiants ainsi que le mot de passe du compte dockerhub
       env:
         DOCKER_USER: ${{secrets.DOCKER_USERNAME}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
 
-#on lance la commande login pour se connecter à dockerhub
+        
       run:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: build the docker image
-      run: docker build . --file DockerHub/Dockerfile --tag ${{secrets.DOCKER_TAG}}:$(date +%m)
-#on lance la commande de push    
+      run: docker build -t ${{secrets.DOCKER_TAG}}:latest .
+      
     - name: Docker push
-      run: docker push ${{secrets.DOCKER_TAG}}:$(date +%m)
+      run: docker push ${{secrets.DOCKER_TAG}}:latest
